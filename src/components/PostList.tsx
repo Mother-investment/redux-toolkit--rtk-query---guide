@@ -7,7 +7,18 @@ const PostList = () => {
     // const {data: posts, error, isLoading, refetch} = postAPI.useFetchAllPostsQuery(10, {
     //     pollingInterval: 1000 -- таймер запроса (раз в 1000мс отправляется запрос)
     // })
-    const {data: posts, error, isLoading, refetch} = postAPI.useFetchAllPostsQuery(10)
+    const {data: posts, error, isLoading, refetch} = postAPI.useFetchAllPostsQuery(5)
+
+    // ---------------------------------ДОБАВЛЕНИЕ ПОСТОВ--------------------------------------------
+    // const [createPost, {error: createError, ...}] = postAPI.useCreatePostMutation({} as IPost)  //error: createError <--- смена названия
+
+    // const handleCreate = async () => {
+    //   const title = 'Title fsdfsd'
+    //   await createPost({title, body: title})
+    // }
+// --------------------------------------------------------------------------------------------------------
+
+
     if(error) return <h1>Ошибка</h1>
   return (
     <div>
